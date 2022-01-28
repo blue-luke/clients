@@ -4,19 +4,23 @@ socket = TCPSocket.new('localhost', 2345)
 
 loop do
 
-  puts socket.gets
+  incoming_message = socket.gets
+  
+  puts "#{incoming_message}"
 
-  message = gets.chomp
+  puts "Type your response"
 
-  socket.puts "#{message}"
-
-  if message == "quit"
+  if incoming_message == "quit"
 
     socket.close
 
   else
-  
-    puts socket.gets
+
+    outgoing_message = gets.chomp
+
+    socket.puts "#{outgoing_message}"
+    
+    puts "Await a response"
 
   end
 
