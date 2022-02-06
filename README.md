@@ -4,7 +4,7 @@ A series of short exercises related to servers and clients
 
 ## Instructions
 
-To run a simple ftp messaging app:
+To run a simple tcp messaging app:
 - Run ex3server.rb in the command line: ruby ex3server.rb
 - Run ex3client.rb in a new terminal in the command line: ruby ex3client.rb
 - Then, send and receive messages between the two terminals
